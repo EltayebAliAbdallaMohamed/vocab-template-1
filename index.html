@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accessible Vocabulary Practice</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="container">
+
+  <h1 id="pageTitle" aria-live="polite"></h1>
+
+  <div class="progress" aria-live="polite">
+    <p id="counter"></p>
+  </div>
+
+  <div class="word-box">
+    <h2 id="word" aria-live="polite"></h2>
+    <p id="example"></p>
+    <p id="arabic" lang="ar"></p>
+  </div>
+
+  <button aria-label="Play English pronunciation" id="playEnglish">
+    🔊 Play English
+  </button>
+
+  <button aria-label="Play Arabic pronunciation" id="playArabic">
+    🔊 Play Arabic
+  </button>
+
+  <div class="nav-buttons">
+    <button aria-label="Previous word" id="prevBtn">Previous</button>
+    <button aria-label="Next word" id="nextBtn">Next</button>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
