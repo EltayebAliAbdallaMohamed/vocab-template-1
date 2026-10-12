@@ -19,7 +19,7 @@
   <div class="word-box">
     <h2 id="word" aria-live="polite"></h2>
     <p id="example"></p>
-    <p id="arabic" lang="ar"></p>
+    <p id="arabic" lang="ar" dir="rtl"></p>
   </div>
 
   <button aria-label="Play English pronunciation" id="playEnglish">
@@ -33,6 +33,13 @@
   <div class="nav-buttons">
     <button aria-label="Previous word" id="prevBtn">Previous</button>
     <button aria-label="Next word" id="nextBtn">Next</button>
+  </div>
+
+  <div class="tts-option">
+    <label>
+      <input type="checkbox" id="autoTTS">
+      Auto TTS English (when Play English is clicked)
+    </label>
   </div>
 
 </div>

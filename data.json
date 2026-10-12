@@ -1,40 +1,60 @@
 {
   "title": "Q Skills Intro LS – Unit 1 – Page 15",
   "items": [
+   {
+      "word": "This is about me",
+      "example": "Hello, Everyone. My name is David. I am from London, but I live in New York. I am a student at King George University. My ID number is 448123567. Today I want to talk about what makes a good friend.",
+      "arabic": "مرحبا، الجميع. اسمي بلال. أنا من الطائف لكنني أعيش في الرياض. أنا طالب في جامعة الملك سعود. رقم هويتي هو 448123567. اليوم أريد أن أتحدث عن ما يجعل الصديق جيداً."
+    },
+   
     {
-      "word": "collect",
-      "example": "Some people collect old coins.",
-      "arabic": "بعض الناس يجمعون العملات القديمة"
+
+      "word": "honest",
+      "example": "A good friend is someone who is honest. They tell the truth, and they don't hide things. When a friend is honest, you feel safe with them. If they are not honest, you don't feel safe with them.",
+      "arabic": "الصديق الجيد هو شخص صادق. يقول الحقيقة، ولا يخفي الأشياء. عندما يكون الصديق صادقًا، تشعر بالأمان معه. إذا لم يكن صادقًا، لا تشعر بالأمان معه."
     },
     {
-      "word": "club",
-      "example": "We belong to the reading club.",
-      "arabic": "نحن ننتمي إلى نادي القراءة"
+      "word": "funny",
+      "example": "A good friend is also funny. They make you laugh when you feel sad, and they help you enjoy your time. They tell nice jokes.",
+      "arabic": "الصديق الجيد يكون مضحكًا أيضًا. يجعلك تضحك عندما تشعر بالحزن، ويساعدك على الاستمتاع بوقتك. يروي نكات لطيفة."
     },
     {
-      "word": "collect",
-      "example": "I collect stamps from different countries.",
-      "arabic": "أنا أجمع الطوابع من دول مختلفة"
+      "word": "generous",
+      "example": "Another important thing is being generous. A generous friend shares their time, their help, and sometimes even their things. They don't think only about themselves.",
+      "arabic": "شيء مهم آخر هو أن تكون كريمًا. الصديق الكريم يشارك وقتَه، ومساعدته، وأحيانًا حتى أشياؤه. لا يفكر فقط في نفسه. شيء مهم آخر هو أن تكون كريمًا. الصديق الكريم يشارك وقتَه، ومساعدته، وأحيانًا حتى أشياؤه. لا يفكر فقط في نفسه."
     },
     {
-      "word": "good at",
-      "example": "She is good at drawing.",
-      "arabic": "هي جيدة في الرسم"
+      "word": "can be trusted",
+      "example": "A good friend is someone who can be trusted. You can tell them your secrets, and you know they will not tell anyone else. Trust is very important in friendship.",
+      "arabic": "الصديق الجيد هو شخص يمكن الوثوق به. يمكنك أن تخبره بأسرارك، وتعرف أنه لن يخبر أحدًا آخر. الثقة مهمة جدًا في الصداقة."
     },
     {
-      "word": "hobbies",
-      "example": "My hobbies include reading and swimming.",
-      "arabic": "هواياتي تشمل القراءة والسباحة"
+      "word": "gives good advice",
+      "example": "A good friend also gives good advice. When you have a problem, they listen to you and try to help you make the right decision. They solve your problem.",
+      "arabic": "الصديق الجيد يعطي نصائح جيدة أيضاً. عندما تكون لديك مشكلة، يستمع إليك ويحاول مساعدتك في اتخاذ القرار الصحيح. هم يحلون مشكلتك."
     },
     {
-      "word": "interested in",
-      "example": "He is interested in technology",
-      "arabic": "هو مهتم بالتكنولوجيا"
+      "word": "a good listener",
+      "example": "A good friend is a good listener. They don't interrupt you. They listen carefully and understand your feelings.",
+      "arabic": "الصديق الجيد هو مستمع جيد. لا يقاطعك. يستمع بعناية ويفهم مشاعرك."
     },
     {
-      "word": "team",
-      "example": "We work together as a team.",
-      "arabic": "نحن نعمل معًا كفريق"
+      "word": "have similar hobbies and interests",
+      "example": "It is also nice when a friend has similar hobbies and interests. You can play together, study together, or enjoy the same activities.",
+      "arabic": "من الجميل أيضًا عندما يكون لدى الصديق هوايات واهتمامات مشابهة. يمكنكم اللعب معًا، أو الدراسة معًا، أو الاستمتاع بنفس الأنشطة."
+    },
+    
+   
+    {
+      "word": "helpful",
+      "example": "A good friend should be helpful. If you need help, they help you to do the things that you need to do. For example, they help you with homework.",
+      "arabic": "الصديق الجيد يجب أن يكون مساعدًا. إذا كنت بحاجة إلى مساعدة، فهو يساعدك في القيام بالأشياء التي تحتاج إلى القيام بها. على سبيل المثال، يساعدك في الواجبات المنزلية."
+    },
+    {
+      "word": "intelligent",
+      "example": "Finally, a good friend is intelligent. You can play together, study together, or enjoy the same activities. They think before they act, and they help you learn new things.",
+      "arabic": "أخيرًا، الصديق الجيد يكون ذكيًا. يمكنكم اللعب معًا، الدراسة معًا، أو الاستمتاع بنفس الأنشطة. يفكر قبل أن يتصرف، ويساعدك على تعلم أشياء جديدة."
     }
+
   ]
 }

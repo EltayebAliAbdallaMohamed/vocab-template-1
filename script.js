@@ -1,79 +1,101 @@
-let vocabData = {};
+let data = null;
 let index = 0;
 
-// Load JSON data
+// DOM elements
+const wordEl = document.getElementById("word");
+const exampleEl = document.getElementById("example");
+const arabicEl = document.getElementById("arabic");
+const counterEl = document.getElementById("counter");
+const pageTitleEl = document.getElementById("pageTitle");
+
+const playEnglishBtn = document.getElementById("playEnglish");
+const playArabicBtn = document.getElementById("playArabic");
+
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+const autoTTS = document.getElementById("autoTTS");
+
+// Load JSON file
 fetch("data.json")
   .then(response => response.json())
-  .then(data => {
-    vocabData = data;
-    updateTitle();
-    updateContent();
-  });
+  .then(json => {
+    data = json;
+    pageTitleEl.textContent = data.title;
+    loadWord();
+  })
+  .catch(err => console.error("Error loading JSON:", err));
 
-// Update page title
-function updateTitle() {
-  document.getElementById("pageTitle").textContent = vocabData.title;
+// Load current word
+function loadWord() {
+  const item = data.items[index];
+  speechSynthesis.cancel();
+
+
+  wordEl.textContent = item.word;
+  exampleEl.textContent = item.example;
+  arabicEl.textContent = item.arabic;
+
+  counterEl.textContent = `${index + 1} / ${data.items.length}`;
+
+  // AUTO English TTS ONLY if checkbox is checked
+  if (autoTTS.checked) {
+    speakEnglishFull(item);
+  }
 }
 
-// Update displayed content
-function updateContent() {
-  const items = vocabData.items;
+// English TTS: word → pause → example
+function speakEnglishFull(item) {
+  const wordUtter = new SpeechSynthesisUtterance(item.word);
+  wordUtter.lang = "en-US";
 
-  document.getElementById("word").textContent = items[index].word;
-  document.getElementById("example").textContent = items[index].example;
-  document.getElementById("arabic").textContent = items[index].arabic;
-
-  // Update progress counter
-  document.getElementById("counter").textContent =
-    `Item ${index + 1} of ${items.length}`;
-}
-
-// English TTS
-function speakEnglish() {
-  const items = vocabData.items;
-  const word = items[index].word;
-  const example = items[index].example;
-
-  const utterWord = new SpeechSynthesisUtterance(word);
-  const utterExample = new SpeechSynthesisUtterance(example);
-
-  utterWord.lang = "en-US";
-  utterExample.lang = "en-US";
-
-  utterWord.onend = () => {
-    setTimeout(() => {
-      speechSynthesis.speak(utterExample);
-    }, 600);
+  wordUtter.onend = () => {
+    const exampleUtter = new SpeechSynthesisUtterance(item.example);
+    exampleUtter.lang = "en-US";
+    speechSynthesis.speak(exampleUtter);
   };
 
-  speechSynthesis.speak(utterWord);
+  speechSynthesis.speak(wordUtter);
 }
 
-// Arabic TTS
-function speakArabic() {
-  const items = vocabData.items;
-  const arabicSentence = items[index].arabic;
+// Arabic TTS: translation only
+function speakArabicFull(item) {
+  const utter = new SpeechSynthesisUtterance(item.arabic);
+  utter.lang = "ar-SA";
+  speechSynthesis.speak(utter);
+}
 
-  const utterArabic = new SpeechSynthesisUtterance(arabicSentence);
-  utterArabic.lang = "ar-SA";
-  speechSynthesis.speak(utterArabic);
+// Play English button (manual always works)
+function handlePlayEnglish() {
+  const item = data.items[index];
+  speechSynthesis.cancel();
+
+  speakEnglishFull(item);
+}
+
+// Play Arabic button (manual always works)
+function handlePlayArabic() {
+  const item = data.items[index];
+  speechSynthesis.cancel();
+
+  speakArabicFull(item);
 }
 
 // Navigation
-function nextWord() {
-  const items = vocabData.items;
-  index = (index + 1) % items.length;
-  updateContent();
-}
+prevBtn.addEventListener("click", () => {
+  if (index > 0) {
+    index--;
+    loadWord();  // auto English only if checkbox is checked
+  }
+});
 
-function prevWord() {
-  const items = vocabData.items;
-  index = (index - 1 + items.length) % items.length;
-  updateContent();
-}
+nextBtn.addEventListener("click", () => {
+  if (index < data.items.length - 1) {
+    index++;
+    loadWord();  // auto English only if checkbox is checked
+  }
+});
 
-// Button listeners
-document.getElementById("playEnglish").addEventListener("click", speakEnglish);
-document.getElementById("playArabic").addEventListener("click", speakArabic);
-document.getElementById("nextBtn").addEventListener("click", nextWord);
-document.getElementById("prevBtn").addEventListener("click", prevWord);
+// Button events
+playEnglishBtn.addEventListener("click", handlePlayEnglish);
+playArabicBtn.addEventListener("click", handlePlayArabic);

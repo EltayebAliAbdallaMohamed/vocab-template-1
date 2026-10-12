@@ -1,53 +1,80 @@
 body {
   font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
   margin: 0;
-  padding: 1rem;
-  background: #ffffff;
-  color: #000000;
-  line-height: 1.6;
+  padding: 0;
 }
 
 .container {
-  max-width: 480px;
-  margin: auto;
+  max-width: 600px;
+  margin: 40px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-h1, h2 {
-  font-size: 1.6rem;
+h1 {
+  text-align: center;
+}
+
+.progress {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .word-box {
-  margin-bottom: 1.5rem;
+  background: #fafafa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
 }
 
-.progress p {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+#word {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+#example {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+#arabic {
+  font-size: 1.3em;
+  direction: rtl;
+  text-align: right;
 }
 
 button {
   width: 100%;
-  padding: 1rem;
-  margin: 0.5rem 0;
-  font-size: 1.2rem;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 1.1em;
   border: none;
-  border-radius: 8px;
-  background: #005bbb;
+  border-radius: 6px;
+  background-color: #0078d4;
   color: white;
+  cursor: pointer;
 }
 
-button:active {
-  background: #004999;
+button:hover {
+  background-color: #005fa3;
 }
 
 .nav-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 1rem;
+  margin-top: 20px;
 }
 
 .nav-buttons button {
-  width: 48%;
-  background: #333;
+  width: 45%;
+}
+
+.tts-option {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1em;
 }
